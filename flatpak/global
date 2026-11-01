@@ -1,0 +1,3 @@
+[Context]
+unset-environment=GTK_THEME;ICON_THEME;
+filesystems=xdg-config/gtk-3.0:ro;xdg-config/gtk-4.0:ro;

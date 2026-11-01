@@ -1,0 +1,114 @@
+/* Matte Black theme overrides for Libadwaita / GTK4 */
+@define-color accent_bg_color #e68e0d;
+@define-color accent_fg_color #121212;
+@define-color accent_color #e68e0d;
+@define-color focus_border_color #e68e0d;
+@define-color destructive_bg_color #d35f5f;
+@define-color destructive_fg_color #121212;
+@define-color destructive_color #d35f5f;
+@define-color success_bg_color #ffc107;
+@define-color success_fg_color #121212;
+@define-color success_color #ffc107;
+@define-color warning_bg_color #b91c1c;
+@define-color warning_fg_color #ebebeb;
+@define-color warning_color #b91c1c;
+@define-color error_bg_color #d35f5f;
+@define-color error_fg_color #121212;
+@define-color error_color #d35f5f;
+
+/* Основной фон папок (#121212) и мягкий белый текст */
+@define-color window_bg_color #121212;
+@define-color window_fg_color #ebebeb;
+@define-color view_bg_color #121212;
+@define-color view_fg_color #ebebeb;
+
+/* Headerbar (#161616 - темнее чем #1e1e1e) */
+@define-color headerbar_bg_color #161616;
+@define-color headerbar_fg_color #ebebeb;
+@define-color headerbar_border_color #222222;
+@define-color headerbar_backdrop_color #161616;
+@define-color headerbar_shade_color rgba(0, 0, 0, 0.36);
+@define-color headerbar_darker_shade_color rgba(0, 0, 0, 0.36);
+
+/* Sidebar / левая панель (#161616) */
+@define-color sidebar_bg_color #161616;
+@define-color sidebar_fg_color #ebebeb;
+@define-color sidebar_backdrop_color #161616;
+@define-color sidebar_shade_color rgba(0, 0, 0, 0.36);
+@define-color sidebar_border_color #222222;
+@define-color secondary_sidebar_bg_color #161616;
+@define-color secondary_sidebar_fg_color #ebebeb;
+@define-color secondary_sidebar_backdrop_color #161616;
+@define-color secondary_sidebar_shade_color rgba(0, 0, 0, 0.36);
+@define-color secondary_sidebar_border_color #222222;
+
+/* Карточки, диалоги, поповеры */
+@define-color card_bg_color #1a1a1a;
+@define-color card_fg_color #ebebeb;
+@define-color card_shade_color rgba(0, 0, 0, 0.36);
+@define-color dialog_bg_color #1a1a1a;
+@define-color dialog_fg_color #ebebeb;
+@define-color popover_bg_color #1a1a1a;
+@define-color popover_fg_color #ebebeb;
+@define-color popover_shade_color rgba(0, 0, 0, 0.36);
+@define-color thumbnail_bg_color #1a1a1a;
+@define-color thumbnail_fg_color #ebebeb;
+@define-color shade_color rgba(0, 0, 0, 0.36);
+@define-color scrollbar_outline_color rgba(0, 0, 0, 0.36);
+
+/* Фиксация фона и цвета шрифта для компонентов Libadwaita/Nautilus */
+.navigation-sidebar,
+.navigation-sidebar:backdrop {
+  background-color: #161616;
+  color: #ebebeb;
+}
+
+.view,
+.view:backdrop,
+textview text,
+textview text:backdrop {
+  background-color: #121212;
+  color: #ebebeb;
+}
+
+headerbar,
+headerbar:backdrop {
+  background-color: #161616;
+  color: #ebebeb;
+}
+
+/* Строка пути (Home / omarchy-backup) и поиск - в цвет фона папок (#121212) */
+.nautilus-pathbar,
+.nautilus-pathbar:backdrop {
+  background-color: #121212;
+  border: 1px solid #222222;
+}
+
+.nautilus-path-button:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+}
+
+entry,
+entry:backdrop,
+.nautilus-location-entry,
+.nautilus-query-editor {
+  background-color: #121212;
+  color: #ebebeb;
+  border: 1px solid #222222;
+  box-shadow: none;
+}
+
+entry:focus-within,
+.nautilus-location-entry:focus-within,
+.nautilus-query-editor:focus-within {
+  border-color: #e68e0d;
+  box-shadow: inset 0 0 0 1px #e68e0d;
+  outline-color: #e68e0d;
+}
+
+selection,
+textview text selection,
+entry selection {
+  background-color: #e68e0d;
+  color: #121212;
+}

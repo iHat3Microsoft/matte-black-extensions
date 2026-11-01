@@ -1,0 +1,12 @@
+/* Matte Black accent & selection styling for Firefox / Zen URL bar & UI */
+::selection {
+  background-color: #e68e0d !important;
+  color: #121212 !important;
+}
+
+#urlbar-input::selection,
+.urlbar-input::selection,
+.urlbar-input-box input::selection {
+  background-color: #e68e0d !important;
+  color: #121212 !important;
+}

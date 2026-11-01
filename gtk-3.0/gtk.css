@@ -1,0 +1,609 @@
+/* Matte Black theme overrides for GTK3 */
+@define-color theme_bg_color #161616;
+@define-color theme_fg_color #ebebeb;
+@define-color theme_base_color #121212;
+@define-color theme_text_color #ebebeb;
+@define-color theme_selected_bg_color #e68e0d;
+@define-color theme_selected_fg_color #121212;
+@define-color theme_unfocused_bg_color #161616;
+@define-color theme_unfocused_fg_color #ebebeb;
+@define-color theme_unfocused_base_color #121212;
+@define-color theme_unfocused_text_color #ebebeb;
+@define-color theme_unfocused_selected_bg_color #e68e0d;
+@define-color theme_unfocused_selected_fg_color #121212;
+@define-color selected_bg_color #e68e0d;
+@define-color selected_fg_color #121212;
+@define-color accent_bg_color #e68e0d;
+@define-color accent_fg_color #121212;
+@define-color accent_color #e68e0d;
+@define-color insensitive_bg_color #161616;
+@define-color insensitive_fg_color #9a9a9a;
+@define-color insensitive_base_color #121212;
+@define-color borders #222222;
+@define-color unfocused_borders #222222;
+@define-color link_color #e68e0d;
+@define-color link_visited_color #d35f5f;
+@define-color success_color #ffc107;
+@define-color warning_color #b91c1c;
+@define-color error_color #d35f5f;
+
+/* Окна и базовый фон */
+window,
+window.background,
+.background {
+  background-color: #121212;
+  color: #ebebeb;
+}
+
+/* Шапки окон (Headerbars) */
+headerbar,
+headerbar:backdrop {
+  background-color: #161616;
+  background-image: none;
+  color: #ebebeb;
+  border-color: #222222;
+  box-shadow: none;
+}
+
+headerbar .title,
+headerbar .subtitle {
+  color: #ebebeb;
+}
+
+/* Верхнее меню окна (Menubar - virt-manager и др.) */
+menubar,
+.menubar {
+  background-color: #161616;
+  color: #ebebeb;
+}
+
+menubar > menuitem,
+.menubar > menuitem {
+  color: #ebebeb;
+}
+
+menubar > menuitem:hover,
+.menubar > menuitem:hover {
+  background-color: #e68e0d;
+  color: #121212;
+  box-shadow: none;
+}
+
+/* Панель инструментов (Toolbar в virt-manager и др.) */
+toolbar,
+.toolbar {
+  background-color: #161616;
+  background-image: none;
+  color: #ebebeb;
+  border-bottom: 1px solid #222222;
+  box-shadow: none;
+}
+
+toolbar button,
+.toolbar button {
+  background-color: #202020;
+  background-image: none;
+  color: #ebebeb;
+  border: 1px solid #282828;
+  box-shadow: none;
+}
+
+toolbar button:hover,
+.toolbar button:hover {
+  background-color: #2a2a2a;
+  background-image: none;
+  color: #ffffff;
+  border-color: #383838;
+}
+
+/* Выпадающие меню и контекстные меню */
+menu,
+.menu,
+.context-menu {
+  background-color: #1a1a1a;
+  color: #ebebeb;
+  border: 1px solid #282828;
+  padding: 4px;
+}
+
+menu menuitem,
+menu menuitem label,
+.menu menuitem,
+.menu menuitem label,
+.context-menu menuitem,
+.context-menu menuitem label {
+  color: #ebebeb;
+  padding: 4px 8px;
+}
+
+menu menuitem:hover,
+.menu menuitem:hover,
+.context-menu menuitem:hover,
+menu menuitem:selected,
+.menu menuitem:selected,
+.context-menu menuitem:selected {
+  background-color: #e68e0d;
+  color: #121212;
+}
+
+menu menuitem:hover label,
+.menu menuitem:hover label,
+.context-menu menuitem:hover label,
+menu menuitem:selected label,
+.menu menuitem:selected label,
+.context-menu menuitem:selected label,
+menu menuitem:hover image,
+.menu menuitem:hover image,
+.context-menu menuitem:hover image,
+menu menuitem:selected image,
+.menu menuitem:selected image,
+.context-menu menuitem:selected image {
+  color: #121212;
+}
+
+/* Читаемость неактивных элементов в меню и интерфейсе */
+menu menuitem:disabled,
+menu menuitem:disabled label,
+menu menuitem:disabled:backdrop,
+menu menuitem:disabled:backdrop label,
+.menu menuitem:disabled,
+.menu menuitem:disabled label,
+.menu menuitem:disabled:backdrop,
+.menu menuitem:disabled:backdrop label,
+menu menuitem label:disabled,
+menuitem:disabled,
+menuitem:disabled label,
+menuitem:disabled:backdrop,
+menuitem:disabled:backdrop label,
+label:disabled,
+label:disabled:backdrop,
+.dim-label,
+label.dim-label,
+cell:disabled,
+.disabled {
+  color: #9a9a9a;
+  opacity: 0.9;
+}
+
+/* Чекбоксы и радио-кнопки */
+check,
+radio {
+  border-color: #333333;
+}
+
+check:checked,
+radio:checked {
+  background-image: none;
+  background-color: #e68e0d;
+  border-color: #e68e0d;
+  color: #121212;
+}
+
+check:checked:hover,
+radio:checked:hover {
+  background-color: #f59e0b;
+  border-color: #f59e0b;
+  color: #121212;
+}
+
+check:checked:backdrop,
+radio:checked:backdrop {
+  background-image: none;
+  background-color: #a36509;
+  border-color: #a36509;
+  color: #121212;
+}
+
+check:indeterminate,
+radio:indeterminate {
+  background-image: none;
+  background-color: #e68e0d;
+  border-color: #e68e0d;
+  color: #121212;
+}
+
+/* Чекбоксы и радио внутри пунктов меню (в virt-manager и др.) */
+menu menuitem check,
+menu menuitem radio {
+  border-color: #555555;
+  color: #ebebeb;
+}
+
+menu menuitem check:checked,
+menu menuitem radio:checked {
+  color: #e68e0d;
+  background-color: transparent;
+  border-color: #e68e0d;
+}
+
+menu menuitem:hover check:checked,
+menu menuitem:hover radio:checked,
+menu menuitem:selected check:checked,
+menu menuitem:selected radio:checked {
+  color: #121212;
+}
+
+menu menuitem:disabled check,
+menu menuitem:disabled radio,
+menu menuitem check:disabled,
+menu menuitem radio:disabled,
+menu menuitem:disabled:backdrop check,
+menu menuitem:disabled:backdrop radio {
+  border-color: #404040;
+  color: #666666;
+}
+
+/* Переключатели (Switches) */
+switch:checked {
+  background-color: #e68e0d;
+  border-color: #e68e0d;
+  color: #121212;
+}
+
+switch:backdrop:checked {
+  background-color: #a36509;
+  border-color: #a36509;
+  color: #121212;
+}
+
+/* Ползунки, полосы прогресса и скроллбары */
+progressbar progress,
+scale highlight {
+  background-color: #e68e0d;
+  border-color: #c97b0a;
+}
+
+scale slider:hover,
+scale slider:active {
+  background-color: #e68e0d;
+}
+
+scrollbar slider:hover:active {
+  background-color: #e68e0d;
+}
+
+/* Вкладки (Notebook) */
+notebook > header.top > tabs > tab:checked {
+  box-shadow: inset 0 -3px #e68e0d;
+}
+
+notebook > header.bottom > tabs > tab:checked {
+  box-shadow: inset 0 3px #e68e0d;
+}
+
+notebook > header.left > tabs > tab:checked {
+  box-shadow: inset -3px 0 #e68e0d;
+}
+
+notebook > header.right > tabs > tab:checked {
+  box-shadow: inset 3px 0 #e68e0d;
+}
+
+/* Боковые панели */
+.sidebar,
+.sidebar:backdrop {
+  background-color: #161616;
+  color: #ebebeb;
+}
+
+/* Списки и представления */
+.view,
+.view:backdrop,
+list {
+  background-color: #121212;
+  color: #ebebeb;
+}
+
+/* Карточки и сгруппированные списки (GNOME Boxes, libhandy, boxed-list) */
+list.content,
+list.boxed-list {
+  background-color: transparent;
+}
+
+list.content > row,
+list.boxed-list > row {
+  background-color: #1a1a1a;
+  color: #ebebeb;
+  border-color: #282828;
+}
+
+list.content > row:hover,
+list.boxed-list > row:hover {
+  background-color: #222222;
+}
+
+/* Читаемость подзаголовков в строках (Powered Off, описания и статус) */
+row label.subtitle {
+  color: #a8a8a8;
+  opacity: 0.9;
+}
+
+/* Заголовки столбцов в таблицах/деревьях */
+treeview.view header button,
+treeview.view header button:hover,
+treeview.view header button:active {
+  background-color: #161616;
+  background-image: none;
+  border-color: #222222;
+  color: #ebebeb;
+  box-shadow: none;
+}
+
+/* Подсветка строки при наведении в TreeView и списках */
+treeview.view:hover:not(:selected),
+row:hover:not(:selected) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Выделение (активное/в фокусе) */
+.view:selected,
+.view:selected:focus,
+.view text:selected,
+.view text:selected:focus,
+treeview.view:selected,
+treeview.view:selected:focus,
+row:selected,
+row:selected:focus,
+iconview:selected,
+iconview:selected:focus,
+flowbox flowboxchild:selected,
+flowbox flowboxchild:selected:focus,
+list.content > row:selected,
+list.content > row:selected:focus {
+  background-color: #e68e0d;
+  color: #121212;
+}
+
+/* Текст внутри выделенных строк */
+.view:selected label,
+treeview.view:selected label,
+row:selected label,
+list.content > row:selected label,
+row:selected label.subtitle,
+list.content > row:selected label.subtitle {
+  color: #121212;
+  opacity: 1;
+}
+
+/* Выделение при неактивном окне (backdrop) */
+.view:selected:backdrop,
+.view:backdrop:selected,
+.view text:selected:backdrop,
+.view text:backdrop:selected,
+treeview.view:selected:backdrop,
+treeview.view:backdrop:selected,
+row:selected:backdrop,
+row:backdrop:selected,
+iconview:selected:backdrop,
+iconview:backdrop:selected,
+flowbox flowboxchild:selected:backdrop,
+flowbox flowboxchild:backdrop:selected,
+list.content > row:selected:backdrop,
+list.content > row:backdrop:selected {
+  background-color: #a36509;
+  color: #121212;
+}
+
+.view:selected:backdrop label,
+treeview.view:selected:backdrop label,
+row:selected:backdrop label,
+list.content > row:selected:backdrop label,
+row:selected:backdrop label.subtitle {
+  color: #121212;
+  opacity: 0.9;
+}
+
+/* Боковая панель Places (FileChooser и файловые диалоги) */
+placessidebar,
+placessidebar.sidebar {
+  background-color: #161616;
+  color: #ebebeb;
+}
+
+placessidebar row:hover:not(:selected) {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+placessidebar row:selected,
+placessidebar row:selected:focus {
+  background-color: #e68e0d;
+  color: #121212;
+}
+
+placessidebar row:selected label,
+placessidebar row:selected image,
+placessidebar row:selected .sidebar-icon {
+  color: #121212;
+}
+
+placessidebar row:selected:backdrop,
+placessidebar row:backdrop:selected {
+  background-color: #a36509;
+  color: #121212;
+}
+
+placessidebar row:selected:backdrop label,
+placessidebar row:selected:backdrop image,
+placessidebar row:selected:backdrop .sidebar-icon {
+  color: #121212;
+}
+
+/* Кнопки основного действия (Open, Save, Create и т.д. в диалогах) */
+button.suggested-action {
+  background-color: #e68e0d;
+  background-image: none;
+  color: #121212;
+  border-color: #c97b0a;
+  box-shadow: none;
+  text-shadow: none;
+}
+
+button.suggested-action:hover {
+  background-color: #f59e0b;
+  background-image: none;
+  color: #121212;
+}
+
+button.suggested-action:active,
+button.suggested-action:checked {
+  background-color: #c97b0a;
+  background-image: none;
+  color: #121212;
+}
+
+button.suggested-action:backdrop {
+  background-color: #a36509;
+  background-image: none;
+  color: #121212;
+  border-color: #a36509;
+}
+
+/* Выпадающие списки (ComboBox) и кнопки фильтров */
+combobox,
+combobox button,
+combobox button.combo,
+combobox > box > button.combo {
+  background-color: #1a1a1a;
+  background-image: none;
+  color: #ebebeb;
+  border: 1px solid #282828;
+  box-shadow: none;
+}
+
+combobox button.combo:hover {
+  background-color: #242424;
+  background-image: none;
+  color: #ebebeb;
+  border-color: #383838;
+}
+
+combobox button.combo:checked,
+combobox button.combo:active {
+  background-color: #e68e0d;
+  background-image: none;
+  color: #121212;
+  border-color: #e68e0d;
+}
+
+combobox button.combo:checked label,
+combobox button.combo:active label,
+combobox button.combo:checked cellview,
+combobox button.combo:active cellview {
+  color: #121212;
+}
+
+/* Диалог выбора файлов (FileChooser) */
+filechooser #pathbarbox,
+filechooser .path-bar {
+  background-color: #121212;
+  border-bottom: 1px solid #222222;
+}
+
+filechooser treeview.view:selected,
+filechooser treeview.view:selected:focus {
+  background-color: #e68e0d;
+  color: #121212;
+}
+
+actionbar,
+actionbar > revealer > box {
+  background-color: #121212;
+  border-top: 1px solid #222222;
+}
+
+/* Всплывающие меню и поповеры */
+popover,
+popover.background {
+  background-color: #1a1a1a;
+  color: #ebebeb;
+  border: 1px solid #222222;
+}
+
+/* Поля ввода (Entry, Password prompt, Keyring, Search) */
+entry,
+entry:backdrop {
+  background-color: #121212;
+  color: #ebebeb;
+  border: 1px solid #222222;
+  box-shadow: none;
+}
+
+entry:focus,
+entry:focus:dir(ltr),
+entry:focus:dir(rtl),
+spinbutton:focus:not(.vertical),
+treeview entry:focus,
+.osd entry:focus {
+  background-color: #121212;
+  color: #ebebeb;
+  border-color: #e68e0d;
+  box-shadow: inset 0 0 0 1px #e68e0d;
+  outline: none;
+}
+
+/* Выделение текста в полях ввода, метках и представлениях */
+selection,
+label selection,
+entry selection,
+entry selection:focus,
+spinbutton selection,
+textview text selection {
+  background-color: #e68e0d;
+  color: #121212;
+}
+
+/* Каретка и фокусные элементы */
+* {
+  -gtk-secondary-caret-color: #e68e0d;
+  outline-color: rgba(230, 142, 13, 0.4);
+}
+
+spinbutton:not(.vertical) image:active,
+entry image:active {
+  color: #e68e0d;
+}
+
+spinbutton:not(.vertical) progress,
+entry progress {
+  border-color: #e68e0d;
+}
+
+rubberband,
+.rubberband,
+flowbox rubberband,
+treeview.view rubberband {
+  background-color: rgba(230, 142, 13, 0.25);
+  border: 1px solid #e68e0d;
+}
+
+.selection-mode headerbar,
+headerbar.selection-mode {
+  background-color: #161616;
+  border-color: #e68e0d;
+}
+
+paned > separator:selected {
+  background-image: image(#e68e0d);
+}
+
+levelbar block.high,
+levelbar block:not(.empty) {
+  border-color: #e68e0d;
+  background-color: #e68e0d;
+}
+
+treeview.view.progressbar {
+  background-color: #e68e0d;
+  background-image: image(#e68e0d);
+}
+
+placessidebar row.sidebar-new-bookmark-row {
+  color: #e68e0d;
+}
+
+/* Ссылки */
+*:link,
+button:link,
+button:visited {
+  color: #e68e0d;
+}
