@@ -4,6 +4,22 @@ Complete **GTK3**, **GTK4 / Libadwaita**, **Qt (qt6ct / KDE)**, **Flatpak**, **B
 
 ---
 
+## Screenshots
+
+| Nautilus | Firefox |
+|:---:|:---:|
+| ![Nautilus](img/nautilus.png) | ![Firefox](img/firefox.png) |
+
+| Qt6ct / KDE | Telegram |
+|:---:|:---:|
+| ![Qt6ct](img/qt6ct-kde.png) | ![Telegram](img/telegram.png) |
+
+| virt-manager |
+|:---:|
+| ![virt-manager](img/virt-manager-home.png) |
+
+---
+
 ## 🎨 Color Palette & Philosophy
 
 This extension faithfully follows the Matte Black palette with warm amber / gold accents derived from the official palette gradient (`#b91c1c` → `#ffaa0a`):
