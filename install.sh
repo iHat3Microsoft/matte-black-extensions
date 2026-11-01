@@ -22,15 +22,20 @@ cp "$SCRIPT_DIR/gtk-4.0/gtk.css" "$HOME/.config/gtk-4.0/gtk.css"
 [ ! -f "$HOME/.config/gtk-4.0/settings.ini" ] && cp "$SCRIPT_DIR/gtk-4.0/settings.ini" "$HOME/.config/gtk-4.0/settings.ini"
 
 # 3. Qt / KDE color scheme
-echo "-> Installing Qt color scheme (~/.local/share/color-schemes/MatteBlack.colors)..."
-mkdir -p "$HOME/.local/share/color-schemes"
-cp "$SCRIPT_DIR/qt/MatteBlack.colors" "$HOME/.local/share/color-schemes/MatteBlack.colors"
+if ! command -v qt6ct-kde > /dev/null 2>&1; then
+    echo "WARNING: qt6ct-kde not found — Qt/KDE theme (MatteBlack.colors) will NOT be applied."
+    echo "         Install it from AUR: yay -S qt6ct-kde"
+    echo "         Note: qt6ct-kde conflicts with vanilla qt6ct — remove qt6ct first if installed."
+else
+    echo "-> Installing Qt color scheme (~/.local/share/color-schemes/MatteBlack.colors)..."
+    mkdir -p "$HOME/.local/share/color-schemes"
+    cp "$SCRIPT_DIR/qt/MatteBlack.colors" "$HOME/.local/share/color-schemes/MatteBlack.colors"
 
-# 4. Qt6ct config (if qt6ct is used)
-if [ -d "$HOME/.config/qt6ct" ]; then
-    echo "-> Configuring qt6ct to use MatteBlack.colors..."
-    if [ -f "$HOME/.config/qt6ct/qt6ct.conf" ]; then
-        sed -i 's|^color_scheme_path=.*|color_scheme_path='"$HOME"'/.local/share/color-schemes/MatteBlack.colors|' "$HOME/.config/qt6ct/qt6ct.conf"
+    if [ -d "$HOME/.config/qt6ct" ]; then
+        echo "-> Configuring qt6ct-kde to use MatteBlack.colors..."
+        if [ -f "$HOME/.config/qt6ct/qt6ct.conf" ]; then
+            sed -i 's|^color_scheme_path=.*|color_scheme_path='"$HOME"'/.local/share/color-schemes/MatteBlack.colors|' "$HOME/.config/qt6ct/qt6ct.conf"
+        fi
     fi
 fi
 
