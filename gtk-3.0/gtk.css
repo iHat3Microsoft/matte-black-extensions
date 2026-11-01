@@ -107,37 +107,40 @@ menu,
 }
 
 menu menuitem,
-menu menuitem label,
 .menu menuitem,
-.menu menuitem label,
-.context-menu menuitem,
-.context-menu menuitem label {
+.context-menu menuitem {
   color: #ebebeb;
   padding: 4px 8px;
 }
 
-menu menuitem:hover,
-.menu menuitem:hover,
-.context-menu menuitem:hover,
-menu menuitem:selected,
-.menu menuitem:selected,
-.context-menu menuitem:selected {
+menu menuitem label,
+.menu menuitem label,
+.context-menu menuitem label {
+  color: inherit;
+}
+
+menu > menuitem:hover,
+menu > menuitem:selected,
+.menu > menuitem:hover,
+.menu > menuitem:selected,
+.context-menu > menuitem:hover,
+.context-menu > menuitem:selected {
   background-color: #e68e0d;
   color: #121212;
 }
 
-menu menuitem:hover label,
-.menu menuitem:hover label,
-.context-menu menuitem:hover label,
-menu menuitem:selected label,
-.menu menuitem:selected label,
-.context-menu menuitem:selected label,
-menu menuitem:hover image,
-.menu menuitem:hover image,
-.context-menu menuitem:hover image,
-menu menuitem:selected image,
-.menu menuitem:selected image,
-.context-menu menuitem:selected image {
+menu > menuitem:hover > label,
+menu > menuitem:selected > label,
+menu > menuitem:hover > box > label,
+menu > menuitem:selected > box > label,
+.menu > menuitem:hover > label,
+.menu > menuitem:selected > label,
+.context-menu > menuitem:hover > label,
+.context-menu > menuitem:selected > label,
+menu > menuitem:hover > image,
+menu > menuitem:selected > image,
+menu > menuitem:hover > box > image,
+menu > menuitem:selected > box > image {
   color: #121212;
 }
 
@@ -205,7 +208,7 @@ radio:indeterminate {
 /* Чекбоксы и радио внутри пунктов меню (в virt-manager и др.) */
 menu menuitem check,
 menu menuitem radio {
-  border-color: #555555;
+  border-color: #666666;
   color: #ebebeb;
 }
 
@@ -213,14 +216,23 @@ menu menuitem check:checked,
 menu menuitem radio:checked {
   color: #e68e0d;
   background-color: transparent;
-  border-color: #e68e0d;
+  border-color: #666666;
 }
 
-menu menuitem:hover check:checked,
-menu menuitem:hover radio:checked,
-menu menuitem:selected check:checked,
-menu menuitem:selected radio:checked {
+menu > menuitem:hover check,
+menu > menuitem:selected check,
+menu > menuitem:hover radio,
+menu > menuitem:selected radio {
+  border-color: #121212;
   color: #121212;
+}
+
+menu > menuitem:hover check:checked,
+menu > menuitem:selected check:checked,
+menu > menuitem:hover radio:checked,
+menu > menuitem:selected radio:checked {
+  color: #121212;
+  border-color: #121212;
 }
 
 menu menuitem:disabled check,
@@ -230,7 +242,7 @@ menu menuitem radio:disabled,
 menu menuitem:disabled:backdrop check,
 menu menuitem:disabled:backdrop radio {
   border-color: #404040;
-  color: #666666;
+  color: #555555;
 }
 
 /* Переключатели (Switches) */
