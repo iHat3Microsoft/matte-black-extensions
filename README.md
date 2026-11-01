@@ -14,9 +14,7 @@ Complete **GTK3**, **GTK4 / Libadwaita**, **Qt (qt6ct / KDE)**, **Flatpak**, **B
 |:---:|:---:|
 | ![Qt6ct](img/qt6ct-kde.png) | ![Telegram](img/telegram.png) |
 
-| virt-manager |
-|:---:|
-| ![virt-manager](img/virt-manager-home.png) |
+<div align="center"><img src="img/virt-manager-home.png" width="49%"></div>
 
 ---
 
